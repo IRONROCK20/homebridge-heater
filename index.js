@@ -95,6 +95,12 @@ HomeMeteoAccessory.prototype.getValue = function(name, callback) {
                     }); //End: request humidity
                 } //End: else, name != "temperature"
             } //End: if OK respone
+			
+			
+			else {
+				return callback(null, { humidity: 69, temperature: 69, light: 69 });
+			}
+			
         }); //End: request temperature
     } else {
         request(this.url + this.json_url, (error, response, body) => {
