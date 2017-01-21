@@ -1,24 +1,24 @@
 {
-  "name": "homebridge-meteostation",
-  "version": "0.7.1",
-  "author": "BardinPetr",
+  "name": "homebridge-heater",
+  "version": "0.0.1",
+  "author": "asabino",
   "license": "MIT",
-  "description": "Plugin for Homebridge to use Arduino (ESP8266) - based home meteostation with HomeKit",
+  "description": "Plugin for Homebridge to use an Arduino with ESP8266 to control an heater",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/jshint/bin/jshint index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BardinPetr/homebridge-meteostation.git"
+    "url": "git+https://github.com/asabino/homebridge-heater.git"
   },
   "bugs": {
-    "url": "https://github.com/BardinPetr/homebridge-meteostation/issues"
+    "url": "https://github.com/asabino/homebridge-heater/issues"
   },
-  "homepage": "https://github.com/BardinPetr/homebridge-meteostation#readme",
+  "homepage": "https://github.com/asabino/homebridge-heater/blob/master/README.md",
   "keywords": [
     "homebridge-plugin",
-    "meteostation",
+    "heater",
     "arduino"
   ],
   "engines": {
