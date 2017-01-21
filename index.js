@@ -64,7 +64,7 @@ function HomeHeaterAccessory(log, config) {
 }
 
 HomeHeaterAccessory.prototype.getValue = function(name, callback) {
-    if(type == "page"){
+    if(this.type == "page"){
         request(this.url + this.temp_url, (error, response, body) => {
             if (!error && response.statusCode == 200) {
                 var temperature = parseInt(body, 10);
