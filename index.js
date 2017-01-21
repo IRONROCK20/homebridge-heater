@@ -7,10 +7,10 @@ module.exports = function(homebridge) {
     Service = homebridge.hap.Service;
     Characteristic = homebridge.hap.Characteristic;
     
-    homebridge.registerAccessory("homebridge-meteostation", "HomeMeteo", HomeMeteoAccessory);
+    homebridge.registerAccessory("homebridge-heater", "HomeHeater", HomeHeaterAccessory);
 };
 
-function HomeMeteoAccessory(log, config) {
+function HomeHeaterAccessory(log, config) {
     this.log = log;
     this.name = config["name"];
     this.url = config["url"];
@@ -63,7 +63,7 @@ function HomeMeteoAccessory(log, config) {
         });}, this.freq);
 }
 
-HomeMeteoAccessory.prototype.getValue = function(name, callback) {
+HomeHeaterAccessory.prototype.getValue = function(name, callback) {
     if(type == "page"){
         request(this.url + this.temp_url, (error, response, body) => {
             if (!error && response.statusCode == 200) {
@@ -112,6 +112,6 @@ HomeMeteoAccessory.prototype.getValue = function(name, callback) {
     }
 };
 
-HomeMeteoAccessory.prototype.getServices = function() {
+HomeHeaterAccessory.prototype.getServices = function() {
     return this.services;
 };

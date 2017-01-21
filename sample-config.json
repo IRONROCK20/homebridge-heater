@@ -11,21 +11,13 @@
 
     "accessories": [
         {
-            "accessory": "HomeMeteo",
-            "name": "Meteostation",
+            "accessory": "HomeHeater",
+            "name": "HeaterController",
             "type": "page",
             "url":  "http://192.168.0.38",
             "temp_url":  "/temperature",
             "humi_url":  "/humidity",
             "light_url": "/light",
-            "freq": 1000
-        },        
-        {
-            "accessory": "HomeMeteo",
-            "name": "Meteostation_JSON",
-            "type": "json",
-            "url":  "http://192.168.0.38",
-            "json_url":  "/get",
             "freq": 1000
         }
     ]
