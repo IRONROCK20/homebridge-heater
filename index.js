@@ -63,7 +63,7 @@ function HomeHeaterAccessory(log, config) {
         });}, this.freq);
 }
 
-// HomeHeaterAccessory.prototype.getValue = function(name, callback) {
+ HomeHeaterAccessory.prototype.getValue = function(name, callback) {
 //     if(this.type == "page"){
 //         request(this.url + this.temp_url, (error, response, body) => {
 //             if (!error && response.statusCode == 200) {
