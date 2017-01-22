@@ -67,8 +67,8 @@ function HomeHeaterAccessory(log, config) {
 
  HomeHeaterAccessory.prototype.getValue = function(name, callback) {
 
-console.log("getValue: " + name);
-   
+   console.log("getValue: " + name);
+
     // if(this.type == "page"){
         // request(this.url + this.temp_url, (error, response, body) => {
             // if (!error && response.statusCode == 200) {
@@ -96,11 +96,10 @@ console.log("getValue: " + name);
                                     // } //End: if OK respone
                                 // }); //End: request light
                             } //End: else, name != "humidity"
-                        } //End: if OK respone
+                        // } //End: if OK respone
                     // }); //End: request humidity
                 } //End: else, name != "temperature"
             // } //End: if OK respone
-
         // }); //End: request temperature
     // } else {
     //     request(this.url + this.json_url, (error, response, body) => {
