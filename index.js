@@ -6,7 +6,7 @@ var Service, Characteristic;
 module.exports = function(homebridge) {
     Service = homebridge.hap.Service;
     Characteristic = homebridge.hap.Characteristic;
-    
+
     homebridge.registerAccessory("homebridge-heater", "HomeHeater", HomeHeaterAccessory);
 };
 
@@ -31,8 +31,8 @@ function HomeHeaterAccessory(log, config) {
     this.temperatureService
     .getCharacteristic(Characteristic.CurrentTemperature)
     .on('get', this.getValue.bind(this, 'temperature'));
-    this.services.push(this.temperatureService);    
-    
+    this.services.push(this.temperatureService);
+
     this.humidityService = new Service.HumiditySensor ("Humidity Sensor");
     this.humidityService
     .getCharacteristic(Characteristic.CurrentRelativeHumidity)
@@ -111,7 +111,7 @@ function HomeHeaterAccessory(log, config) {
 //         });
 //     }
 
-return callback(null, { humidity: 69, temperature: 69, light: 69 });
+return callback(null, 69);
 };
 
 HomeHeaterAccessory.prototype.getServices = function() {
