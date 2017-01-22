@@ -50,6 +50,8 @@ function HomeHeaterAccessory(log, config) {
     setInterval(() => {
         this.getValue(null, (err, { humidity, temperature, light}) => {
 
+        console.log("humidity" + humidity + "temperature" + temperature + "light" + light);
+
         this.temperatureService
         .setCharacteristic(Characteristic.CurrentTemperature, temperature);
 
