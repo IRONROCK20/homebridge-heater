@@ -113,7 +113,7 @@ function HomeHeaterAccessory(log, config) {
 //         });
 //     }
 
-return callback(null, { humidity: 69, temperature: 69, light: 69 });
+return callback(null, { humidity: 99, temperature: 39, light: 109 });
 };
 
 HomeHeaterAccessory.prototype.getServices = function() {
