@@ -66,54 +66,50 @@ function HomeHeaterAccessory(log, config) {
 }
 
  HomeHeaterAccessory.prototype.getValue = function(name, callback) {
-//     if(this.type == "page"){
-//         request(this.url + this.temp_url, (error, response, body) => {
-//             if (!error && response.statusCode == 200) {
-//                 var temperature = parseInt(body, 10);
-//                 if(name == "temperature"){
-//                     return callback(null, temperature);
-//                 }
-//                 else{
-//                     request(this.url + this.temp_url, (error, response, body) => {
-//                         if (!error && response.statusCode == 200) {
-//                             var humidity = parseInt(body, 10);
-//                             if(name == "humidity"){
-//                                 return callback(null, humidity);
-//                             }
-//                             else{
-//                                 request(this.url + this.temp_url, (error, response, body) => {
-//                                     if (!error && response.statusCode == 200) {
-//                                         var light = parseInt(body, 10);
-//                                         if(name == "light"){
-//                                             return callback(null, light);
-//                                         }
-//                                         else{
-//                                             return callback(null, { humidity: humidity, temperature: temperature, light: light });
-//                                         } //End: else, name != "humidity"
-//                                     } //End: if OK respone
-//                                 }); //End: request light
-//                             } //End: else, name != "humidity"
-//                         } //End: if OK respone
-//                     }); //End: request humidity
-//                 } //End: else, name != "temperature"
-//             } //End: if OK respone
-//
-//
-// 			else {
-// 				return callback(null, { humidity: 69, temperature: 69, light: 69 });
-// 			}
-//
-//         }); //End: request temperature
-//     } else {
-//         request(this.url + this.json_url, (error, response, body) => {
-//             if (!error && response.statusCode == 200) {
-//                 var obj = JSON.parse(body);
-//                 return callback(null, { humidity: obj.humidity, temperature: obj.temperature, light: obj.light });
-//             }
-//         });
-//     }
 
-return callback(null, { humidity: 99, temperature: 39, light: 109 });
+console.log("getValue: " + name);
+   
+    // if(this.type == "page"){
+        // request(this.url + this.temp_url, (error, response, body) => {
+            // if (!error && response.statusCode == 200) {
+                var temperature = 39;
+                if(name == "temperature"){
+                    return callback(null, temperature);
+                }
+                else{
+                    // request(this.url + this.temp_url, (error, response, body) => {
+                        // if (!error && response.statusCode == 200) {
+                            var humidity = 99;
+                            if(name == "humidity"){
+                                return callback(null, humidity);
+                            }
+                            else{
+                                // request(this.url + this.temp_url, (error, response, body) => {
+                                    // if (!error && response.statusCode == 200) {
+                                        var light = 109;
+                                        if(name == "light"){
+                                            return callback(null, light);
+                                        }
+                                        else{
+                                            return callback(null, { humidity: humidity, temperature: temperature, light: light });
+                                        } //End: else, name != "humidity"
+                                    // } //End: if OK respone
+                                // }); //End: request light
+                            } //End: else, name != "humidity"
+                        } //End: if OK respone
+                    // }); //End: request humidity
+                } //End: else, name != "temperature"
+            // } //End: if OK respone
+
+        // }); //End: request temperature
+    // } else {
+    //     request(this.url + this.json_url, (error, response, body) => {
+    //         if (!error && response.statusCode == 200) {
+    //             var obj = JSON.parse(body);
+    //             return callback(null, { humidity: obj.humidity, temperature: obj.temperature, light: obj.light });
+    //         }
+    //     });
+    // }
 };
 
 HomeHeaterAccessory.prototype.getServices = function() {
